@@ -112,17 +112,17 @@ HELP_MSG = "Click The Button Below To Get Help Menu In Your Dm."
 START_MSG = "I'm Awake Already!\n<b>Haven't Slept Since:</b> <code>{}</code>"
 
 NEKO_STICKERS = (
-    "CAACAgUAAxkBAAIIW2NL5v9F9hUom4xmsgNYb63SEfZZAAIZBgACYAF5VIerYoMcSln8KgQ",
-    "CAACAgUAAxkBAAIIT2NL5tVmdAO3n1o3cp9Jic9LkqJvAAK7AgACoU3RVLpdwYfQPmS9KgQ",
-    "CAACAgUAAxkBAAIIUGNL5tVNd0rwdoMv-uDVcZ3hHgwlAAIwAwACP9jQVMv2AfU-DvBfKgQ",
-    "CAACAgUAAxkBAAIIUmNL5tUzCtvS5E-XR8h3tFMSqVu7AAIGAwACNZnYVOTUhlBiHTQGKgQ",
-    "CAACAgUAAxkBAAIIUWNL5tVBEQAB2gWLSq0ymEPeAj5kmQAC3QEAAuu92VSPj3UkCiNvfioE",
+    "CAACAgUAAxkBAAEU2p9mXyjHIIogWTPU-cqe5HyFuL7dpQACnA8AAkXlWFb7vNU1HlFkuzUE",
+    "CAACAgUAAxkBAAEU3cVmZAvedPz-gD5NthAQt5WNz96nlwACEg0AAiA0IVcTI_ZSy4U2ZzUE",
+    "CAACAgUAAxkBAAEU3cZmZAvf8euZuwIvzUDmeRhRlRk08QACkREAAnwQIFcaQhSCAsxiXDUE",
+    "CAACAgUAAxkBAAEU3dFmZAwk605ZwmKQ8h3QUuiqxnztnwACvhAAAinVIFeTAcxXjeTLQzUE",
+    "CAACAgUAAxkBAAEU3c9mZAwfTWGrGOZAkJRoxjeelIT4MgACZhAAAn_SIVfz6UxYyxpdNzUE",
 )
 
 PM_START_TEXT = """
-────「 [{}](https://telegra.ph/file/9996ec2eafdef4692102d.jpg) 」────
-*Hola! {},*
-*Meow Meow, Don't Touch Me Without My Permission!*
+────「 [{}](https://telegra.ph/file/8c75cea65d142050fed1a.jpg) 」────
+*Wake Up To Reality! {},*
+*I am Uchiha Madara A Anime Themed Group Management Bot!!*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ❍ *Uptime:* `{}`
 ❍ `{}` *Users, Across* `{}` *Chats.*
@@ -133,14 +133,14 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text=f"Add {BOT_NAME} To Your Group",
+            text=f"Summon Me Into A Group!",
             url=f"https://telegram.dog/{BOT_USERNAME}?startgroup=true",
         )
     ],
     [
         InlineKeyboardButton(text="📓 Guidelines", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Source 🌐", url="https://github.com/Awesome-Prince/NekoRobot-3.git"
+            text="Developer 🌐", url="https://t.me/Lord_Doraemon"
         ),
     ],
     [
@@ -148,27 +148,27 @@ buttons = [
             text="🚑 Support", url=f"https://telegram.dog/{SUPPORT_CHAT}"
         ),
         InlineKeyboardButton(
-            text="📢 Updates", url="https://telegram.dog/Programmer_Updates"
+            text="📢 Updates", url="https://telegram.dog/Doraemon_Telegram_Bots"
         ),
     ],
 ]
 
 HELP_STRINGS = """
-*Main* commands available:
-➛ /help: PM's you this message.
-➛ /help <module name>: PM's you info about that module.
-➛ /donate: information on how to donate!
+*Commands Available!:
+➛ /help: PM's You This Message.
+➛ /help <module name>: PM's You Info About That Command.
+➛ /donate: Information On How To Donate!
 ➛ /settings:
-   ➛ in PM: will send you your settings for all supported modules.
-   ➛ in a group: will redirect you to pm, with all that chat's settings.
+   ➛ In PM: Will Send You Your Settings For All Supported Commands.
+   ➛ In A Group: Will Redirect You To PM, With All That Chat's Settings.*
 """
 
 GROUP_START_IMG = (
-    "https://te.legra.ph/file/5f272dc498e4cf91faf92.jpg",
-    "https://te.legra.ph/file/9d8190aba9ac3421af488.jpg",
-    "https://te.legra.ph/file/5b1ce336f0c0216224040.jpg",
-    "https://te.legra.ph/file/f1f67047d973f3aea4004.jpg",
-    "https://te.legra.ph/file/c2526c05d65fd2fbfa58b.jpg",
+    "https://telegra.ph/file/0a517502311d413d8a780.jpg",
+    "https://telegra.ph/file/67de513493b1b3af6871e.jpg",
+    "https://telegra.ph/file/aab890f6b2d22904f6526.jpg",
+    "https://telegra.ph/file/95a30dd7d631ecea8f795.jpg",
+    "https://telegra.ph/file/13d7f3408fef270863a9f.jpg",
 )
 
 DONATE_STRING = """❂ I'm Free for Everyone ❂"""
@@ -239,7 +239,7 @@ def send_help(chat_id, text, keyboard=None):
 
 def test(update: Update):
     # pprint(eval(str(update)))
-    # update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
+    # update.effective_message.reply_text("Wake Up To Reality _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
 
@@ -302,7 +302,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             random.choice(GROUP_START_IMG),
-            caption=f"<b>Yes, Master I'm alive!\nHaven't sleep since</b>: <code>{uptime}</code>",
+            caption=f"<b>Yes, I'm alive!\nHaven't sleep since</b>: <code>{uptime}</code>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -313,7 +313,7 @@ def start(update: Update, context: CallbackContext):
                         ),
                         InlineKeyboardButton(
                             text="📢 Updates",
-                            url="https://telegram.dog/Programmer_Updates",
+                            url="https://telegram.dog/Doraemon_Telegram_Bots",
                         ),
                     ]
                 ]
@@ -677,7 +677,7 @@ def donate(update: Update, context: CallbackContext) -> None:
                         [
                             InlineKeyboardButton(
                                 text="📢 Updates",
-                                url="https://telegram.dog/Programmer_Updates",
+                                url="https://telegram.dog/Doraemon_Telegram_Bots",
                             ),
                             InlineKeyboardButton(
                                 text="🚑 Support",
