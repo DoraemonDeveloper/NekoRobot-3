@@ -252,13 +252,13 @@ pgram = Client(
 
 # Credits Logger
 print(
-    "[NEKOROBOT] NEKO Is Starting. | Programmer Network Project | BSD 2-Clause License."
+    "[NEKOROBOT] MADARA Is Starting. | Programmer Network Project | BSD 2-Clause License."
 )
 print(
-    "[NEKOROBOT] Mewo Mewo! Successfully Connected With Programmer • Data Center • Chennai"
+    "[NEKOROBOT] Wake Up To Reality! Successfully Connected With Programmer • Data Center • Chennai"
 )
 print(
-    "[NEKOROBOT] Project Maintained By: github.com/Awesome-Prince (https://github.com/Awesome-Prince/NekoRobot-3)"
+    "[NEKOROBOT] Project Maintained By: Doraemon  (https://t.me/Lord_Doraemon)"
 )
 
 print("[NEKOROBOT]: Telegraph Installing")
